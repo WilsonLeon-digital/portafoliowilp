@@ -1,0 +1,962 @@
+
+/*=============================
+    GOOGLE FONT
+==============================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/*=============================
+    CONFIGURACIÓN GENERAL
+==============================*/
+
+*{
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Poppins',sans-serif;
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    background:linear-gradient(
+        -45deg,
+        #0f2027,
+        #203a43,
+        #2c5364,
+        #0f2027
+    );
+
+    background-size:400% 400%;
+
+    animation:fondo 12s ease infinite;
+
+    color:white;
+
+    padding:40px;
+
+}
+
+
+@keyframes fondo{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    50%{
+
+        background-position:100% 50%;
+
+    }
+
+    100%{
+
+        background-position:0% 50%;
+
+    }
+
+}
+
+
+/*=============================
+    CONTENEDOR PRINCIPAL
+==============================*/
+
+.portafolio{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+
+/*=============================
+    TÍTULOS
+==============================*/
+
+h1{
+
+    text-align:center;
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+    color:#00e5ff;
+
+    text-shadow:
+
+        0px 0px 10px rgb(6,7,7),
+
+        0px 0px 20px rgb(1,7,7);
+
+}
+
+
+h2{
+
+    color:#00e5ff;
+
+    margin-bottom:25px;
+
+    text-align:center;
+
+    font-size:38px;
+
+}
+
+
+h3{
+
+    color:#4fd1ff;
+
+    margin-bottom:18px;
+
+    font-size:28px;
+
+}
+
+
+h5{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+    color:#d7d7d7;
+
+    font-weight:400;
+
+    font-size:18px;
+
+}
+
+
+p{
+
+    line-height:1.9;
+
+    text-align:justify;
+
+    color:#ededed;
+
+    font-size:17px;
+
+}
+
+
+/*=============================
+        PRESENTACIÓN
+==============================*/
+
+.presentacion{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin-bottom:25px;
+
+}
+
+
+#carnet{
+
+    width:130px;
+
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    margin:0;
+
+    border:2px solid #00e5ff;
+
+    box-shadow:
+
+        0 0 15px rgba(0,229,255,.4);
+
+}
+
+
+/*=============================
+        MENÚ DE NAVEGACIÓN
+==============================*/
+
+nav{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin:30px auto;
+
+    padding:15px 25px;
+
+    background:rgba(61,61,61,.247);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:50px;
+
+    width:fit-content;
+
+    box-shadow:
+
+        0 8px 20px rgba(0,0,0,.3);
+
+    position:sticky;
+
+    top:15px;
+
+    z-index:1000;
+
+}
+
+
+nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    padding:10px 20px;
+
+    border-radius:30px;
+
+    transition:.4s;
+
+}
+
+
+nav a:hover{
+
+    background:#00e5ff;
+
+    color:#0f2027;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+        0 0 15px #00e5ff;
+
+}
+
+
+/*=============================
+        TARJETAS DE PROYECTOS
+==============================*/
+
+/*
+    IMPORTANTE:
+
+    Antes utilizabas:
+
+    .portafolio div
+
+    Eso afectaba TODOS los div del portafolio,
+    incluyendo los div del carrusel.
+
+    Ahora solamente las tarjetas utilizan
+    la clase .proyecto.
+*/
+
+.proyecto{
+
+    margin-top:60px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:
+
+        0px 15px 35px rgba(0,0,0,.4);
+
+    transition:.5s;
+
+    animation:subir 1s;
+
+}
+
+
+.proyecto:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+
+        0px 25px 45px rgba(0,229,255,.4);
+
+}
+
+
+/*=============================
+        IMÁGENES NORMALES
+==============================*/
+
+img{
+
+    width:100%;
+
+    margin-top:25px;
+
+    border-radius:15px;
+
+    transition:.5s;
+
+    border:3px solid transparent;
+
+}
+
+
+img:hover{
+
+    transform:scale(1.04);
+
+    border:3px solid cyan;
+
+    box-shadow:
+
+        0px 0px 30px cyan;
+
+}
+
+
+/*=============================
+        FOTO DE PERFIL
+==============================*/
+
+#carnet{
+
+    width:130px;
+
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    margin:0;
+
+    border:2px solid #00e5ff;
+
+    box-shadow:
+
+        0 0 15px rgba(0,229,255,.4);
+
+}
+
+
+/*
+    Evita que el efecto general de img:hover
+    afecte a la foto de perfil.
+*/
+
+#carnet:hover{
+
+    transform:none;
+
+    border:2px solid #00e5ff;
+
+    box-shadow:
+
+        0 0 15px rgba(0,229,255,.4);
+
+}
+
+
+/*=============================
+        CARRUSEL
+==============================*/
+
+.carrusel{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:900px;
+
+    margin:30px auto;
+
+    overflow:hidden;
+
+    border-radius:15px;
+
+}
+
+
+/*=============================
+        CONTENEDOR DE IMÁGENES
+==============================*/
+
+.imagenes{
+
+    width:100%;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+
+/*=============================
+        IMÁGENES DEL CARRUSEL
+==============================*/
+
+.carrusel .imagen-carrusel{
+
+    width:100%;
+
+    height:500px;
+
+    object-fit:contain;
+
+    display:none;
+
+    margin:0;
+
+    padding:0;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:rgba(0,0,0,.15);
+
+    box-shadow:none;
+
+    transition:opacity .5s ease;
+
+}
+
+
+/*=============================
+        IMAGEN ACTIVA
+==============================*/
+
+.carrusel .imagen-carrusel.activa{
+
+    display:block;
+
+}
+
+
+/*
+    Evitamos que el hover general de img
+    haga zoom en las imágenes del carrusel.
+*/
+
+.carrusel .imagen-carrusel:hover{
+
+    transform:none;
+
+    border:none;
+
+    box-shadow:none;
+
+}
+
+
+/*=============================
+        FLECHAS DEL CARRUSEL
+==============================*/
+
+.flecha{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    z-index:10;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(0,0,0,.65);
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+/*=============================
+        EFECTO FLECHAS
+==============================*/
+
+.flecha:hover{
+
+    background:#00e5ff;
+
+    color:#0f2027;
+
+    box-shadow:
+
+        0 0 20px #00e5ff;
+
+    transform:
+
+        translateY(-50%)
+        scale(1.1);
+
+}
+
+
+/*=============================
+        FLECHA IZQUIERDA
+==============================*/
+
+.izquierda{
+
+    left:15px;
+
+}
+
+
+/*=============================
+        FLECHA DERECHA
+==============================*/
+
+.derecha{
+
+    right:15px;
+
+}
+
+
+/*=============================
+        VIDEO
+==============================*/
+
+video{
+
+    width:100%;
+
+    height:auto;
+
+    margin-top:25px;
+
+    border-radius:15px;
+
+    box-shadow:
+
+        0px 0px 25px rgba(0,229,255,.3);
+
+}
+
+
+/*=============================
+        LINKS
+==============================*/
+
+b{
+
+    display:block;
+
+    margin-top:25px;
+
+    color:#00ffd9;
+
+    font-size:18px;
+
+}
+
+
+/*=============================
+        EFECTO EN TÍTULOS
+==============================*/
+
+h3::after{
+
+    content:"";
+
+    display:block;
+
+    width:80px;
+
+    height:4px;
+
+    background:cyan;
+
+    margin-top:8px;
+
+    border-radius:30px;
+
+}
+
+
+/*=============================
+        ANIMACIÓN DE TARJETAS
+==============================*/
+
+@keyframes subir{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+
+/*=============================
+        SCROLL
+==============================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+::-webkit-scrollbar-thumb{
+
+    background:cyan;
+
+    border-radius:20px;
+
+}
+
+
+::-webkit-scrollbar-track{
+
+    background:#1d1d1d;
+
+}
+
+
+/*=============================
+        MEDIA QUERIES
+        TABLET
+==============================*/
+
+@media(max-width:992px){
+
+    body{
+
+        padding:25px;
+
+    }
+
+
+    h1{
+
+        font-size:42px;
+
+    }
+
+
+    h2{
+
+        font-size:30px;
+
+    }
+
+
+    h3{
+
+        font-size:24px;
+
+    }
+
+
+    p{
+
+        font-size:16px;
+
+    }
+
+
+    .carrusel .imagen-carrusel{
+
+        height:400px;
+
+    }
+
+}
+
+
+/*=============================
+        MEDIA QUERIES
+        TABLET PEQUEÑA
+==============================*/
+
+@media(max-width:768px){
+
+    .portafolio{
+
+        width:100%;
+
+    }
+
+
+    .proyecto{
+
+        padding:20px;
+
+    }
+
+
+    h1{
+
+        font-size:34px;
+
+    }
+
+
+    h2{
+
+        font-size:27px;
+
+    }
+
+
+    h3{
+
+        font-size:22px;
+
+    }
+
+
+    h5{
+
+        font-size:16px;
+
+    }
+
+
+    p{
+
+        font-size:15px;
+
+    }
+
+
+    /* PRESENTACIÓN */
+
+    .presentacion{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+
+    #carnet{
+
+        width:120px;
+
+        height:160px;
+
+    }
+
+
+    /* CARRUSEL */
+
+    .carrusel .imagen-carrusel{
+
+        height:320px;
+
+    }
+
+
+    .flecha{
+
+        width:42px;
+
+        height:42px;
+
+        font-size:24px;
+
+    }
+
+
+    .izquierda{
+
+        left:10px;
+
+    }
+
+
+    .derecha{
+
+        right:10px;
+
+    }
+
+}
+
+
+/*=============================
+        MEDIA QUERIES
+        CELULAR
+==============================*/
+
+@media(max-width:480px){
+
+    body{
+
+        padding:12px;
+
+    }
+
+
+    h1{
+
+        font-size:28px;
+
+    }
+
+
+    h2{
+
+        font-size:23px;
+
+    }
+
+
+    h3{
+
+        font-size:20px;
+
+    }
+
+
+    h5{
+
+        font-size:14px;
+
+    }
+
+
+    p{
+
+        font-size:14px;
+
+        line-height:1.7;
+
+    }
+
+
+    .proyecto{
+
+        padding:15px;
+
+    }
+
+
+    /* FOTO PERFIL */
+
+    #carnet{
+
+        width:110px;
+
+        height:150px;
+
+    }
+
+
+    /* CARRUSEL */
+
+    .carrusel .imagen-carrusel{
+
+        height:230px;
+
+    }
+
+
+    .flecha{
+
+        width:38px;
+
+        height:38px;
+
+        font-size:20px;
+
+    }
+
+
+    .izquierda{
+
+        left:7px;
+
+    }
+
+
+    .derecha{
+
+        right:7px;
+
+    }
+
+}
